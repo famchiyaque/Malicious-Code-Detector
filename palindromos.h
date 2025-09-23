@@ -7,6 +7,8 @@
 
 using namespace std;
 
+pair<int, int> LPS(string s);
+
 pair<int, int> manachers(string s);
 
 
