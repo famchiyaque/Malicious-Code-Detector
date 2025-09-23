@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1758583481 source:c:\users\andre\documents\analisis_algoritmos\transmisiones\main.cpp
+	<iostream>
+	"lectura.h"
+	"palindromos.h"
+
+1758438579 c:\users\andre\documents\analisis_algoritmos\transmisiones\lectura.h
+
+1758439017 source:c:\users\andre\documents\analisis_algoritmos\transmisiones\lectura.cpp
+	<fstream>
+	<sstream>
+	<string>
+	"lectura.h"
+
+1758524962 c:\users\andre\documents\analisis_algoritmos\transmisiones\palindromos.h
+	<iostream>
+	<string>
+	<utility>
+	<vector>
+
+1758583610 source:c:\users\andre\documents\analisis_algoritmos\transmisiones\palindromos.cpp
+	"palindromos.h"
+
