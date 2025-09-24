@@ -2,6 +2,7 @@
 #include "lectura.h"
 #include "palindromos.h"
 #include "parte1.h"
+#include "parte3.h"
 
 using namespace std;
 
@@ -57,6 +58,8 @@ int main()
 
     // Parte 3: Substring mas largo de las transmisiones
     cout << "--------Substring mas Largo de las Transmisiones----------" << endl;
+    pair<int, int> positions = longestCommonSubstring(t1, t2);
+    cout << positions.first << " " << positions.second << endl;
 
     return 0;
 }
