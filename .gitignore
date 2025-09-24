@@ -1,0 +1,15 @@
+# Compiled binary and object files
+bin/
+obj/
+
+# VSCode project settings
+.vscode/
+
+# Code::Blocks project files
+*.depend
+*.layout
+*.cbp
+
+# OS-specific files
+.DS_Store
+Thumbs.db

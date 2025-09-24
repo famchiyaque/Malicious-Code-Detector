@@ -9,6 +9,11 @@
 
 using namespace std;
 
+// Este archivo se dedica a la construcion del arreglo-Z
+// para cada par de transimison{x}/codigoM{y}, y correr una
+// busqueda sobre dicho arreglo para encontrar instancias
+// de los codigos maliciosos, y devolver sus posiciones
+
 // construir el arreglo Z
 vector<int> buildZArray(const string& str) {
     int n = str.length();
