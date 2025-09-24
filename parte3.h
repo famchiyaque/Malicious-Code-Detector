@@ -1,8 +1,14 @@
+#ifndef PARTE3_H_INCLUDED
+#define PARTE3_H_INCLUDED
 #include <vector>
 #include <string>
 #include <utility>
 
 using namespace std;
+
+// Este archivo regresa las posiciones de inicio/fin del
+// substring comun mas largo entre las dos transmisiones,
+// Las posiciones devueltas son del primer string (s1)
 
 pair<int, int> longestCommonSubstring(const string& s1, const string& s2) {
     int n = s1.size();
@@ -31,3 +37,5 @@ pair<int, int> longestCommonSubstring(const string& s1, const string& s2) {
 }
 
 // con ayuda de https://www.geeksforgeeks.org/dsa/longest-common-substring-dp-29/
+
+#endif // PARTE3_H_INCLUDED

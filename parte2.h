@@ -1,11 +1,15 @@
-#ifndef PALINDROMOS_H_INCLUDED
-#define PALINDROMOS_H_INCLUDED
-#include <iostream>
+#ifndef PARTE2_H_INCLUDED
+#define PARTE2_H_INCLUDED
 #include <string>
 #include <utility>
 #include <vector>
 
 using namespace std;
+
+// Este archivo contiene el algoritmo de Manacher, ademas de 
+// unas funciones de utilidad para recibir y normalizar los strings
+// de las transimisiones, correr el algoritmo, y devolver
+// las posiciones de inicio/fin del palindromo mas largo
 
 string manacherize(string s) {
     string newS = "^";
@@ -29,8 +33,6 @@ pair<int, int> getIndicesPalindrome(const vector<int>& p) {
             maxPos = i;
         }
     }
-    //cout << "Max Pos: " << maxPos << endl;
-    //cout << "Max Size: " << maxSize << endl;
 
     int l = (maxPos - (maxSize - 1)) / 2;
     int r = (maxPos + (maxSize - 1)) / 2;
@@ -40,7 +42,6 @@ pair<int, int> getIndicesPalindrome(const vector<int>& p) {
 
 pair<int, int> manachers(string s) {
     string S = manacherize(s);
-    //cout << "Manacherized: " << S << endl;
     int n = S.length();
 
     int l = 0;
@@ -65,43 +66,8 @@ pair<int, int> manachers(string s) {
         }
     }
 
-    //cout << "[";
-    //for (int i = 0; i < p.size(); i++) {
-    //    cout << p[i] << ",";
-    //}
-    //cout << "]" << endl;;
-
     pair<int, int> ps = getIndicesPalindrome(p);
     return ps;
 }
 
-
-pair<int, int> LPS(string s) {
-    int n = s.length();
-    vector<vector<int>> dp(n, vector<int>(n, 1));
-
-    for (int i = n - 1; i >= 0; i--) {
-        for (int j = i; j < n; j++) {
-            if (i == j) {
-                dp[i][j] = 1;
-                continue;
-            }
-
-            if (s[i] == s[j]) {
-                if (i + 1 == j) dp[i][j] = 2;
-                else dp[i][j] = dp[i+1][j-1] + 2;
-            }
-
-            else {
-                dp[i][j] = max(dp[i+1][j], dp[i][j-1]);
-            }
-        }
-    }
-
-    int res = dp[0][n - 1];
-    cout << "LPS: " << res << endl;
-
-    return {0, 0};
-}
-
-#endif // PALINDROMOS_H_INCLUDED
+#endif // PARTE2_H_INCLUDED
