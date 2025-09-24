@@ -1,6 +1,7 @@
 #include <iostream>
 #include "lectura.h"
 #include "palindromos.h"
+#include "parte1.h"
 
 using namespace std;
 
@@ -24,7 +25,23 @@ int main()
 
     // Parte 1: Probar transmisiones por codigos maliciosos
     cout << "--------Pruebas de Deteccion de Codigos Maliciosos---------" << endl;
-    // implementacion Leo de z-algorithm
+
+    // P de pattern y S de string
+    vector<string> P {m1, m2, m3};
+    vector<string> S {t1, t2};
+
+    // buscar el patron mcode para cada transmission
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            vector<int> pos = findPattern(S[i], P[j]);
+
+            if (pos.empty()) {
+                cout << "false" << endl;
+            } else {
+                cout << "true " << (pos[0] + 1) << endl;
+            }
+        }
+    }
 
 
     // Parte 2: Probar transmisiones por sub-palindromo mas largo
@@ -39,6 +56,7 @@ int main()
     cout << t2.substr(t2Palindromo.first - 1, t2Palindromo.second - t2Palindromo.first + 1) << endl;
 
     // Parte 3: Substring mas largo de las transmisiones
+    cout << "--------Substring mas Largo de las Transmisiones----------" << endl;
 
     return 0;
 }

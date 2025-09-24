@@ -32,10 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="lectura.cpp" />
 		<Unit filename="lectura.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="palindromos.cpp" />
 		<Unit filename="palindromos.h" />
 		<Extensions />
 	</Project>
