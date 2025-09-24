@@ -59,9 +59,8 @@ int main()
     // Parte 3: Substring comun mas largo de las transmisiones
     cout << "!--------Substring mas Largo de las Transmisiones----------!" << endl;
     pair<int, int> positions = longestCommonSubstring(t1, t2);
-    cout << positions.first + 1 << " " << positions.second + 1 << endl;
-    cout << "Positions letter check: " << t1[positions.first] << ", " << t1[positions.second] << endl;
-    cout << t1.substr(positions.first, positions.second - positions.first - 1) << endl;
+    cout << positions.first << " " << positions.second - 1 << endl;
+    cout << t1.substr(positions.first - 1, positions.second - positions.first) << endl;
 
     return 0;
 }
