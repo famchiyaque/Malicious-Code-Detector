@@ -1,2 +1,4 @@
 Andre Zaldivar Agle A01709535
+ - Creó el layout del proyecto, el repositorio, e implementó el algoritmo de Manacher's para la parte 2.
 Leonardo Cervantes Perez A07184003
+ - Implementó el Z-Algorithm para la parte 1, además del algoritmo para el substring común más largo para la parte 3.

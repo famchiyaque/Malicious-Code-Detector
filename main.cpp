@@ -9,12 +9,12 @@ using namespace std;
 string t1, t2, m1, m2, m3;
 
 void initializeStrings() {
-    t1 = readFile("files/transmission31.txt");
-    t2 = readFile("files/transmission32.txt");
+    t1 = readFile("files/transmission51.txt");
+    t2 = readFile("files/transmission52.txt");
 
-    m1 = readFile("files/mcode31.txt");
-    m2 = readFile("files/mcode32.txt");
-    m3 = readFile("files/mcode33.txt");
+    m1 = readFile("files/mcode51.txt");
+    m2 = readFile("files/mcode52.txt");
+    m3 = readFile("files/mcode53.txt");
 }
 
 int main()
@@ -59,8 +59,8 @@ int main()
     // Parte 3: Substring comun mas largo de las transmisiones
     cout << "!--------Substring mas Largo de las Transmisiones----------!" << endl;
     pair<int, int> positions = longestCommonSubstring(t1, t2);
-    cout << positions.first << " " << positions.second - 1 << endl;
-    cout << t1.substr(positions.first - 1, positions.second - positions.first) << endl;
+    cout << positions.first << " " << positions.second << endl;
+    cout << t1.substr(positions.first - 1, positions.second - positions.first + 1) << endl;
 
     return 0;
 }
